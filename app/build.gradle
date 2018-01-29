@@ -20,16 +20,23 @@ android {
     buildToolsVersion '26.0.2'
 
     defaultConfig {
-        applicationId "com.esoxjem.movieguide"
+        applicationId "com.movies.movieguide"
         minSdkVersion 16
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"
 
-        buildConfigField "String", "TMDB_API_KEY", "\"${getProperty("local.properties", "tmdb_api_key")}\""
+//        buildConfigField "String", "TMDB_API_KEY", "\"${getProperty("local.properties", "tmdb_api_key")}\""
+        buildConfigField "String", "TMDB_API_KEY", "\"ede4754e825e4de8525306f0703f535e\""
         buildConfigField "String", "TMDB_BASE_URL", "\"http://api.themoviedb.org/\""
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
+
+    dexOptions {
+        preDexLibraries = false
+        javaMaxHeapSize "4g"
+    }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -60,6 +67,9 @@ ext {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    //Admob
+    compile 'com.google.android.gms:play-services-ads:11.8.0'
 
     //Support
     implementation "com.android.support:design:${supportLibVersion}"

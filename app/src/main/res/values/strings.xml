@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MovieGuide</string>
+    <string name="app_name">Movie Guide</string>
     <string name="action_filter">Filter</string>
     <string name="loading_movies">Loading Movies</string>
     <string name="sort_by">Sort By</string>
@@ -12,4 +12,5 @@
     <string name="favorites">Favorites</string>
     <string name="highest_rated">Highest Rated</string>
     <string name="most_popular">Most Popular</string>
+    <string name="interstitial_ad">ca-app-pub-8825972559142375/7778423450</string>
 </resources>
